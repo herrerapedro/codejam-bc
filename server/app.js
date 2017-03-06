@@ -135,7 +135,7 @@ app.put('/blockchain/orders/order/:sernum/ackcus', function(req,res, next)
 //    Blockchain - Order - Acknowledgement - Carrier
 //-----------------------------------------------------------------------------------------------
 
-app.put('/blockchain/orders/:sernum/ackcarrier', function(req,res, next)
+app.put('/blockchain/orders/order/:sernum/ackcarrier', function(req,res, next)
 {
     order.ackcarrier.update(req,res,next);
 });
@@ -145,7 +145,7 @@ app.put('/blockchain/orders/:sernum/ackcarrier', function(req,res, next)
 //    Blockchain - Order - Acknowledgement - XOM
 //-----------------------------------------------------------------------------------------------
 
-app.put('/blockchain/orders/:order/ackxom', function(req,res, next)
+app.put('/blockchain/orders/order/:order/ackxom', function(req,res, next)
 {
     order.ackxom.update(req,res,next);
 });
