@@ -120,7 +120,7 @@ func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []str
     if err != nil {
       return nil, errors.New("blank error msg")
     }
-    return nil
+    return nil,nil
 }
 
 func main() {
