@@ -15,16 +15,6 @@ import (
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
 
-// type Mortgage struct {
-// 	Owner            string `json:"owner"`
-// 	AccountID        string `json:"accountID"`
-// 	OriginalAmt      string `json:"originalAmt"`
-// 	CurrentBal       string `json:"currentBal"`
-// 	PaymentAmt       string `json:"paymentAmt"`
-// 	Frequency        string `json:"frequency"`
-// 	Status           string `json:"status"`
-// }
-
 //==============================================================================================================================
 //	Carrier - Defines the structure for a Carrier object. JSON on right tells it what JSON fields to map to
 //			  that element when reading a JSON object into the struct e.g. JSON owner -> Struct owner.
@@ -32,7 +22,7 @@ import (
 
 type Carrier struct {
   Name            string `json:"name"`
-  Delivered       string `json:"delivered"`
+  CurrentBal      string `json:"currentBal"`
 }
 //==============================================================================================================================
 //	customer - Defines the structure for a customer object. JSON on right tells it what JSON fields to map to
@@ -85,6 +75,8 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
     return t.createXOM(stub,args)
   case "tradeFunds":
     return t.tradeFunds(stub,args)
+  case "createCarrier":
+    return t.createCarrier(stub,args)
   }
 return nil,nil
 }
@@ -97,9 +89,37 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 
   return nil,nil
 }
+//==============================================================================================================================
+//  Create Carrier
+//==============================================================================================================================
+func (t *SimpleChaincode) createCarrier(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
+  if len(args) != 2 {
+    return nil, errors.New("Incorrect number of arguments. Expecting 3")
+  }
+  C:=args[0]//serial number
+  valueC, err := stub.GetState(C)//get state of previous Order
+  var carrier Carrier//create order object
+  err = json.Unmarshal(valueC, &carrier)
+
+  C2 := &Carrier{
+    Name: args[0],
+    CurrentBal:args[1],
+  }
+
+  c1,_:=json.Marshal(C2)
+  serialnum:= args[0]
+
+  err = stub.PutState(serialnum, []byte(c1)) // passes serialNum as the key value for searching blockchain
+  if err != nil {
+    return nil, err
+
+  }
+  return nil,nil
+}
 
 //==============================================================================================================================
 //  Transfer funds
+//  Transfers from B to A for the amount of C
 //==============================================================================================================================
 func (t *SimpleChaincode) tradeFunds(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 A:=args[0]
