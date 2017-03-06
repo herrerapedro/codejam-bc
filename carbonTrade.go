@@ -114,12 +114,7 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
   err = stub.PutState(serialnum, []byte(o1)) // passes serialNum as the key value for searching blockchain
   if err != nil {
     return nil, err
-    // SN,err:= args[0]
-    // AC,err:=args[1]
-    // AX,err:=args[2]
-    // ACR,err:=args[3]
-    // Cost,err:=args[4]
-    return nil,nil
+  
   }
   return nil,nil
 }
