@@ -1,0 +1,65 @@
+<html>
+<head>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/knockout-3.4.1.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <input type="button" value="Test" />
+    <table id="tblOrders">
+        <thead>
+            <tr style="font-size: 0.8em">
+                <td>Id</td>
+                <td>Ack_Customer</td>
+                <td>Ack_Carrier</td>
+                <td>Ack_Xom</td>
+                <td>Cost</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Orders">
+            <tr>
+                <td data-bind="text: Id"><td>
+                <td data-bind="text: Ack_Customer"><td>
+                <td data-bind="text: Ack_Carrier"><td>
+                <td data-bind="text: Ack_Xom"><td>
+                <td data-bind="text: Cost"><td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        var vm = new XomOrderViewModel();
+
+        function Order(id, ack_customer, ack_carrier, ack_xom, cost) {
+            var self = this;
+            self.Id = id;
+            self.Ack_Customer = ack_customer;
+            self.Ack_Carrier = ack_carrier;
+            self.Ack_Xom = ack_xom;
+            self.Cost = cost;
+        }
+
+        function XomOrderViewModel() {
+            var self = this;
+            self.Orders = ko.observableArray();
+            self.AddOrder = function(order) {
+                this.Orders.push(order);
+            }.bind(this);
+        }
+                                                                                                                                                                                                                       
+        ko.applyBindings(vm);
+
+        $(function() {
+            setInterval(function() {
+                console.log(moment().format());
+            }, 10 * 1000);
+
+            $("input").click(function() {
+                var order = new Order(1, "test", "test", "test", 1000);
+                vm.AddOrder(order);
+            });
+        });
+    </script>
+</body>
+</html>

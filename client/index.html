@@ -1,0 +1,63 @@
+<html>
+<head>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/knockout-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#btnOrder").click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/blockchain/orders",
+                    data: {
+                        ackcus = "true",
+                        ackxom = "false",
+                        ackcarrier = "false",
+                        cost = "1000"
+                    },
+                    success: function(data) {
+                        var sernum = data.sernum;
+                        alert(sernum);
+                    },
+                    error: function(e) {
+                        alert("error");
+                    },
+                    complete: function() {
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <label for="selProduct">Products</label>
+    <select id="selProduct" data-bind="options: Products,
+                       optionsCaption: 'Choose...',
+                       value: ChosenProduct"></select>
+    <br />
+    <label for="txtQuantity">Quantity</label>
+    <input id="txtQuantity" style="width:60px;" type="text" />
+    <div>
+        <input id="btnOrder" type="button" value="Order" />
+    </div>
+
+    <script type="text/javascript">
+        function OrderViewModel(id, ack_customer, ack_carrier, ack_xom, cost) {
+            var self = this;
+            self.Id = id;
+            self.Ack_Customer = ack_customer;
+            self.Ack_Carrier = ack_carrier;
+            self.Ack_Xom = ack_xom;
+            self.Cost = cost;
+        }
+
+        function CustomerOrderViewModel()
+        {
+            var self = this;
+            self.Products = ["Barrel of Oil"];
+            self.ChosenProduct = ko.observable();
+        }
+
+        ko.applyBindings(new CustomerOrderViewModel());
+    </script>
+</body>
+</html>
