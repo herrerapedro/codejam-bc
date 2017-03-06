@@ -107,7 +107,7 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     // AX,err:=args[2]
     // ACR,err:=args[3]
     // Cost,err:=args[4]
-    return nil
+    return nil,nil
 
 }
 
