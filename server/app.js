@@ -117,7 +117,7 @@ app.post('/blockchain/orders', function(req, res, next)
 //    Blockchain - Order 
 //-----------------------------------------------------------------------------------------------
 
-app.get('/blockchain/orders/:sernum', function(req,res, next)
+app.get('/blockchain/orders/order/:sernum', function(req,res, next)
 {
     order.read(req,res,next);
 });
@@ -126,9 +126,9 @@ app.get('/blockchain/orders/:sernum', function(req,res, next)
 //    Blockchain - Order - Acknowledgement - Customer
 //-----------------------------------------------------------------------------------------------
 
-app.put('/blockchain/orders/:sernum/ackcus', function(req,res, next)
+app.put('/blockchain/orders/order/:sernum/ackcus', function(req,res, next)
 {
-    order.read(req,res,next);
+    order.ackcus.update(req,res,next);
 });
 
 //-----------------------------------------------------------------------------------------------
@@ -137,7 +137,7 @@ app.put('/blockchain/orders/:sernum/ackcus', function(req,res, next)
 
 app.put('/blockchain/orders/:sernum/ackcarrier', function(req,res, next)
 {
-    order.read(req,res,next);
+    order.ackcarrier.update(req,res,next);
 });
 
 
@@ -147,7 +147,7 @@ app.put('/blockchain/orders/:sernum/ackcarrier', function(req,res, next)
 
 app.put('/blockchain/orders/:order/ackxom', function(req,res, next)
 {
-    order.read(req,res,next);
+    order.ackxom.update(req,res,next);
 });
 
 //-----------------------------------------------------------------------------------------------

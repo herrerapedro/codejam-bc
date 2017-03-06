@@ -14,12 +14,12 @@ function get_all_orders(req, res, next, usersToSecurityContext, sernum)
 
     tracing.create('ENTER', 'GET blockchain/orders', {});
 
-    if(typeof req.cookies.user !== 'undefined')
+    /*if(typeof req.cookies.user !== 'undefined')
     {
         req.session.user = req.cookies.user;
         req.session.identity = map_ID.user_to_id(req.cookies.user);
-    }
-    user_id = req.session.identity;
+    }*/
+    //user_id = req.session.identity;
     securityContext = usersToSecurityContext[user_id];
 
     return Util.queryChaincode(securityContext, 'ReadOrder', [sernum])
