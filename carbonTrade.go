@@ -104,7 +104,7 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 func (t *SimpleChaincode) tradeFunds(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 A:=args[0]
 B:=args[1]
-amount:=[2]
+amount:=args[2]
 
 //get the balances
 var provider XOM
