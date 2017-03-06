@@ -94,6 +94,14 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
   if len(args) != 5 {
     return nil, errors.New("Incorrect number of arguments. Expecting 5")
   }
+
+  O2 := &Order{
+    serialNum,err:=args[0]
+    AckCus,err:=args[1]
+    AckXom,err:=args[2]
+    AckCarrier,err:=[3]
+    Cost,err:=[4]
+  }
     // SN,err:= args[0]
     // AC,err:=args[1]
     // AX,err:=args[2]
