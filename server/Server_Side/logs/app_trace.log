@@ -1,0 +1,67 @@
+	06/03/2017 12:15:24	INFO	Startup complete on port	8080
+	06/03/2017 12:15:24	ERROR	Startup	OUTPUT: "Failed to enroll registrar with WebAppAdmin undefined"
+	06/03/2017 12:15:24	ERROR	Startup	OUTPUT: {}
+	06/03/2017 12:22:46	INFO	Startup complete on port	8080
+	06/03/2017 12:22:46	ERROR	Startup	OUTPUT: "Failed to enroll registrar with WebAppAdmin undefined"
+	06/03/2017 12:22:46	ERROR	Startup	OUTPUT: {}
+	06/03/2017 12:24:58	INFO	Startup complete on port	8080
+	06/03/2017 12:24:58	ERROR	Startup	OUTPUT: "Failed to enroll registrar with WebAppAdmin undefined"
+	06/03/2017 12:24:58	ERROR	Startup	OUTPUT: {}
+	06/03/2017 12:26:08	INFO	Startup complete on port	8080
+	06/03/2017 12:26:08	ERROR	Startup	OUTPUT: "Failed to enroll registrar with WebAppAdmin undefined"
+	06/03/2017 12:26:08	ERROR	Startup	OUTPUT: {}
+	06/03/2017 12:31:53	INFO	Startup complete on port	8080
+	06/03/2017 12:31:53	ERROR	Startup	OUTPUT: "Failed to enroll registrar with admin undefined"
+	06/03/2017 12:31:53	ERROR	Startup	OUTPUT: {}
+	06/03/2017 12:37:26	INFO	Startup complete on port	8080
+	06/03/2017 12:37:26	ERROR	Startup	OUTPUT: "Failed to enroll registrar with admin d08a724f35"
+	06/03/2017 12:37:26	ERROR	Startup	OUTPUT: {"code":14,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:39:28	INFO	Startup complete on port	8080
+	06/03/2017 12:39:29	ERROR	Startup	OUTPUT: "Failed to enroll registrar with user_type1_0 fe4b940c55"
+	06/03/2017 12:39:29	ERROR	Startup	OUTPUT: {"code":14,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:40:53	INFO	Startup complete on port	8080
+	06/03/2017 12:40:53	ERROR	Startup	OUTPUT: "Failed to enroll registrar with user_type1_0 fe4b940c55"
+	06/03/2017 12:40:53	ERROR	Startup	OUTPUT: {"code":14,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:46:51	INFO	Startup complete on port	8080
+	06/03/2017 12:46:51	ERROR	Startup	OUTPUT: "Failed to enroll registrar with user_type1_0 fe4b940c55"
+	06/03/2017 12:46:51	ERROR	Startup	OUTPUT: {"code":14,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:11	INFO	Startup complete on port	8080
+	06/03/2017 12:48:12	INFO	Startup	Enrolled registrar
+	06/03/2017 12:48:12	INFO	Startup	Set registrar
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Andrew_Hurt using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	ERROR	Startup	OUTPUT: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Toyota using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll ScrapIt_UK using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Joe_Payne using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Anthony_O_Dowd using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Alfa_Romeo using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Aston_Scrap_Centre using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll LeaseCan using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Cray_Bros_London_Ltd using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Viewers_Alfa_Romeo using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll DVLA using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Regionwide_Vehicle_Contracts using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Jaguar_Land_Rover using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Beechvale_Group using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Milescape using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:48:12	INFO	Startup	Failed to enroll Every_Car_Leasing using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup complete on port	8080
+	06/03/2017 12:52:21	INFO	Startup	Enrolled registrar
+	06/03/2017 12:52:21	INFO	Startup	Set registrar
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Regionwide_Vehicle_Contracts using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	ERROR	Startup	OUTPUT: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Aston_Scrap_Centre using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Every_Car_Leasing using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Viewers_Alfa_Romeo using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Alfa_Romeo using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Jaguar_Land_Rover using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Milescape using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Anthony_O_Dowd using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll ScrapIt_UK using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Toyota using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Andrew_Hurt using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll DVLA using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll LeaseCan using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Cray_Bros_London_Ltd using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:21	INFO	Startup	Failed to enroll Beechvale_Group using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
+	06/03/2017 12:52:22	INFO	Startup	Failed to enroll Joe_Payne using HFC. Error: {"code":2,"metadata":{"_internal_repr":{}}}
