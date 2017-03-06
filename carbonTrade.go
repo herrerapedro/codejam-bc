@@ -78,7 +78,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
   case "createOrder":
     return t.createOrder(stub,args)
   }
-return nil
+return nil,nil
 }
 
 func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
@@ -87,7 +87,7 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
     return t.readOrder(stub,args)
   }
 
-  return nil
+  return nil,nil
 }
 
 func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
@@ -99,6 +99,8 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     // AX,err:=args[2]
     // ACR,err:=args[3]
     // Cost,err:=args[4]
+    return nil
+
 }
 
 func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
