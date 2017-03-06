@@ -123,11 +123,11 @@ CBC,err:=strconv.Atoi(customer.CurrentBal)
 CBC=CBC-amount
 CBX=CBX+amount
 
-a1,_=json.Marshal(provider)
+a1,_:=json.Marshal(provider)
 err = stub.PutState(A,[]byte(a1))
 
-b1,_=json.Marshal(customer)
-err = stub.PutState(B,[]byte(a1))
+b1,_:=json.Marshal(customer)
+err = stub.PutState(B,[]byte(b1))
 
 
 }
