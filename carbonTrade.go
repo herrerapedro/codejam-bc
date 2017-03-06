@@ -123,6 +123,9 @@ CBC,err:=strconv.Atoi(customer.CurrentBal)
 CBC=CBC-amount
 CBX=CBX+amount
 
+customer.CurrentBal=CBC
+provider.CurrentBal=CBX
+
 a1,_:=json.Marshal(provider)
 err = stub.PutState(A,[]byte(a1))
 
