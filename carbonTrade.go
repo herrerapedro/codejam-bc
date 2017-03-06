@@ -96,7 +96,7 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
   }
 
   O2 := &Order{
-    serialNum: args[0],
+    SerialNum: args[0],
     AckCus: args[1],
     AckXom: args[2],
     AckCarrier: args[3],
