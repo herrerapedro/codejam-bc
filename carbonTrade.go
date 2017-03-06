@@ -10,7 +10,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"strconv"
+	//"strconv"
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
@@ -78,7 +78,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
   case "createOrder":
     return t.createOrder(stub,args)
   }
-
+return nil
 }
 
 func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
@@ -87,18 +87,18 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
     return t.readOrder(stub,args)
   }
 
-
+  return nil
 }
 
 func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
   if len(args) != 5 {
     return nil, errors.New("Incorrect number of arguments. Expecting 5")
   }
-    SN,err:= args[0]
-    AC,err:=args[1]
-    AX,err:=args[2]
-    ACR,err:=args[3]
-    Cost,err:=args[4]
+    // SN,err:= args[0]
+    // AC,err:=args[1]
+    // AX,err:=args[2]
+    // ACR,err:=args[3]
+    // Cost,err:=args[4]
 }
 
 func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
@@ -110,6 +110,7 @@ func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []str
     if err != nil {
       return nil, errors.New("blank error msg")
     }
+    return nil
 }
 
 func main() {
