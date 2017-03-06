@@ -121,6 +121,7 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     // Cost,err:=args[4]
     return nil,nil
   }
+  return nil,nil
 }
 
 func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
