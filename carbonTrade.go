@@ -95,6 +95,11 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     return nil, errors.New("Incorrect number of arguments. Expecting 5")
   }
 
+  O:=args[0]//account ID
+  valueO, err := stub.GetState(O)//get state of previous Order
+  var order Order//create order object
+  err = json.Unmarshal(valueO, &order)
+
   O2 := &Order{
     SerialNum: args[0],
     AckCus: args[1],
@@ -102,6 +107,13 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     AckCarrier: args[3],
     Cost: args[4],
   }
+
+  o1,_:=json.Marshal(O2)
+  serialnum:= args[0]
+
+  err = stub.PutState(serialnum, []byte(o1)) // passes serialNum as the key value for searching blockchain
+  if err != nil {
+    return nil, err
     // SN,err:= args[0]
     // AC,err:=args[1]
     // AX,err:=args[2]
