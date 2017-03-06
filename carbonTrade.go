@@ -106,7 +106,7 @@ A:=args[0]
 B:=args[1]
 C:=args[2]
 
-amount:=strconv.Atoi(C)
+amount,_:=strconv.Atoi(C)
 
 //get the balances
 var provider XOM
