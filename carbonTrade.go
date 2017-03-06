@@ -104,18 +104,20 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 func (t *SimpleChaincode) tradeFunds(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
 A:=args[0]
 B:=args[1]
-amount:=args[2]
+C:=args[2]
+
+amount:=strconv.Atoi(C)
 
 //get the balances
 var provider XOM
 valueA, err := stub.GetState(A)
-err=json.Unmarshal(valueA,&provider)
-CBX,err:=strconv.Atoi(provider.currentBal)
+err=json.Unmarshal(valueA, &provider)
+CBX,err:=strconv.Atoi(provider.CurrentBal)
 
 var customer Customer
 valueB, err := stub.GetState(B)
 err=json.Unmarshal(valueB, &customer)
-CBC,err:=strconv.Atoi(customer.currentBal)
+CBC,err:=strconv.Atoi(customer.CurrentBal)
 
 //now the trade
 CBC=CBC-amount
