@@ -74,33 +74,42 @@ return nil, nil
 
 func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 
-  func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
-    if len(args) != 5 {
-      return nil, errors.New("Incorrect number of arguments. Expecting 5")
-    }
-      SN,err:= args[0]
-      AC,err:=args[1]
-      AX,err:=args[2]
-      ACR,err:=args[3]
-      Cost,err:=args[4]
+  switch function {
+  case "createOrder":
+    return t.createOrder(stub,args)
+  }
+
+}
+
+func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
+  switch function {
+  case "readOrder":
+    return t.readOrder(stub,args)
   }
 
 
 }
 
-func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
-  func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
-    if len(args) != 1 {
-        return nil, errors.New("Incorrect number of arguments. Expecting AccountID")
-      }
-
-      value, err := stub.GetState(args[0]) //args 0 = serialNum
-      if err != nil {
-    		return nil, errors.New("blank error msg")
-    	}
+func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
+  if len(args) != 5 {
+    return nil, errors.New("Incorrect number of arguments. Expecting 5")
+  }
+    SN,err:= args[0]
+    AC,err:=args[1]
+    AX,err:=args[2]
+    ACR,err:=args[3]
+    Cost,err:=args[4]
 }
 
+func (t *SimpleChaincode) readOrder(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
+  if len(args) != 1 {
+      return nil, errors.New("Incorrect number of arguments. Expecting AccountID")
+    }
 
+    value, err := stub.GetState(args[0]) //args 0 = serialNum
+    if err != nil {
+      return nil, errors.New("blank error msg")
+    }
 }
 
 func main() {
