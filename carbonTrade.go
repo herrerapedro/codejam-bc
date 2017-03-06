@@ -129,7 +129,7 @@ err = stub.PutState(A,[]byte(a1))
 b1,_:=json.Marshal(customer)
 err = stub.PutState(B,[]byte(b1))
 
-
+return nil,nil
 }
 //==============================================================================================================================
 //  XOM Creation
@@ -174,7 +174,7 @@ func (t *SimpleChaincode) createCustomer(stub shim.ChaincodeStubInterface, args 
 
   C2 := &Customer{
     Name: args[0],
-    currentBal:args[1],
+    CurrentBal:args[1],
   }
 
   c1,_:=json.Marshal(C2)
