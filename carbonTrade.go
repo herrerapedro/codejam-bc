@@ -99,8 +99,8 @@ func (t *SimpleChaincode) createOrder(stub shim.ChaincodeStubInterface, args []s
     serialNum: args[0],
     AckCus: args[1],
     AckXom: args[2],
-    AckCarrier:,args[3],
-    Cost:args[4],
+    AckCarrier: args[3],
+    Cost: args[4],
   }
     // SN,err:= args[0]
     // AC,err:=args[1]
