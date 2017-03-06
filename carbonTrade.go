@@ -129,6 +129,10 @@ err = stub.PutState(A,[]byte(a1))
 b1,_:=json.Marshal(customer)
 err = stub.PutState(B,[]byte(b1))
 
+if err != nil {
+  return nil, err
+}
+
 return nil,nil
 }
 //==============================================================================================================================
