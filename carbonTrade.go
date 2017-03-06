@@ -146,7 +146,7 @@ func (t *SimpleChaincode) createXOM(stub shim.ChaincodeStubInterface, args []str
 
   X2 := &XOM{
     Name: args[0],
-    currentBal:args[1],
+    CurrentBal:args[1],
   }
 
   x1,_:=json.Marshal(X2)
